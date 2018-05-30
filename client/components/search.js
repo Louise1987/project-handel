@@ -1,20 +1,22 @@
 // modules
+const SearchComponent = {} //kolla sluttag!!
+
 var mongoose = require('mongoose');
 var textSearch = require('mongoose-text-search');
- 
+
 // create our schema
-var gameSchema = mongoose.Schema({
+var productSchema = mongoose.Schema({
     name: String
   , tags: [String]
   , likes: Number
   , created: Date
 });
- 
+
 // give our schema text search capabilities
-gameSchema.plugin(textSearch);
+productSchema.plugin(textSearch);
  
 // add a text index to the tags array
-gameSchema.index({ tags: 'text' });
+productSchema.index({ tags: 'text' });
  
 // test it out
 var Product = mongoose.model('Product', productSchema);
@@ -27,8 +29,9 @@ Product.create({ name: 'The Times', tags: ['news', 'magazine'] }, function (err)
  
     var inspect = require('util').inspect;
     console.log(inspect(output, { depth: null }));
- 
-
+  
+  
   
   });
 });
+
