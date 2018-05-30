@@ -1,6 +1,6 @@
 body{
   background-color:black;
-  background-image:url(../images/newspaper.jpg);
+  background-image:url(../images/bg5.jpg);
   background-size:cover;
   background-attachment: fixed;
   min-height:100vh;
@@ -18,4 +18,16 @@ body{
 .darker .nav-link{
   color:white;
   font-weight: bold;
+}
+
+h1,h2{
+  font-family: sans-serif;
+  padding: 0 20px;
+  font-size: 40px;
+}
+
+p{
+  font-family: sans-serif;
+  padding: 0 20px;
+  font-size: 20px;
 }

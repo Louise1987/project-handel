@@ -8,8 +8,8 @@ const HelloComponent = {
   `,
   data(){
     return{
-      title: "Welcome to The Magazine Store",
-      description: "The greatest mag store on the east side"
+      title: "Welcome to The Store with the latest News",
+      description: "Select your magazine"
     }
   }
 

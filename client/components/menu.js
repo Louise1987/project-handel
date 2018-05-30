@@ -14,8 +14,15 @@ const MenuComponent = {
       <li class="nav-item">
       <router-link class="nav-link" to="/login">Logga in</router-link>
     </li>
-    
+    <li>
+    <form>
+    <input type="text" name="search" placeholder="Product search" class="">
+    <input type="submit" value="Search" class="">
+    </form>
+    </li>
     
       </ul>
+
+     
     `
   }

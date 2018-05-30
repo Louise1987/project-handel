@@ -25,7 +25,7 @@ const router  = new VueRouter({
     { path: '/', component: HomePageComponent },
     { path: '/products', component: ProductsPageComponent },
     { path: '/cart', component: CartPageComponent },
-    { path: '/login', component: LoginPageComponent },
+    { path: '/login', component: LoginPageComponent }
    
   ]
 });
