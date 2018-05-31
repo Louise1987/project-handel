@@ -217,6 +217,11 @@ app.get('/rest/user', (req, res)=>{
   res.json(response);
 });
 
+//Search module
+app.get('rest/search', async(req, res)=>{
+  res.send('search products');
+});
+
 // Some role tests:
 
 app.get('/rest/admin', async(req, res)=>{

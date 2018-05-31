@@ -17,7 +17,7 @@ const MenuComponent = {
     <li>
     <form>
     <input type="text" name="search" placeholder="Product search" class="">
-    <input type="submit" value="Search" class="">
+    <input type="submit" value="Sök">
     </form>
     </li>
     <li class="nav-item">

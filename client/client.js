@@ -2,8 +2,7 @@ Vue.component('home-page', HomePageComponent);
 Vue.component('products-page', ProductsPageComponent);
 Vue.component('cart-page', CartPageComponent);
 Vue.component('login-page', LoginPageComponent);
-
-
+Vue.component('admin-page', AdminPageComponent);
 
 
 Vue.component('nav-menu', MenuComponent);
@@ -13,8 +12,10 @@ Vue.component('hello', HelloComponent);
 Vue.component('registration', RegistrationComponent);
 Vue.component('cart-item', CartItemComponent);
 Vue.component('cart', CartComponent);
-Vue.component('search', SearchComponent);
-//Vue.component('admin', AdminComponent);
+//Vue.component('search', SearchComponent);
+Vue.component('product-admin', ProductAdminComponent);
+
+
 
 
 
@@ -28,7 +29,6 @@ const router  = new VueRouter({
     { path: '/products', component: ProductsPageComponent },
     { path: '/cart', component: CartPageComponent },
     { path: '/login', component: LoginPageComponent },
-    { path: '/search', component: SearchPageComponent },
     { path: '/admin', component: AdminPageComponent}
    
   ]
