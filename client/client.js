@@ -12,8 +12,11 @@ Vue.component('hello', HelloComponent);
 Vue.component('registration', RegistrationComponent);
 Vue.component('cart-item', CartItemComponent);
 Vue.component('cart', CartComponent);
-//Vue.component('search', SearchComponent);
 Vue.component('product-admin', ProductAdminComponent);
+Vue.component('category', CategoryComponent);
+Vue.component('category-admin', CategoryAdminComponent);
+
+
 
 
 
@@ -26,10 +29,11 @@ const router  = new VueRouter({
   base: '/', // set the correct base
   routes: [ // our frontend routes
     { path: '/', component: HomePageComponent },
-    { path: '/products', component: ProductsPageComponent },
+    { path: '/products/:category?', component: ProductsPageComponent },
     { path: '/cart', component: CartPageComponent },
     { path: '/login', component: LoginPageComponent },
-    { path: '/admin', component: AdminPageComponent}
+    { path: '/admin', component: AdminPageComponent},
+   
    
   ]
 });

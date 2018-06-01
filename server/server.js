@@ -38,6 +38,7 @@ const accessManager = new AccessManager({
 });
 
 // MODELS
+const Category = require('./models/category.js');
 const Product = require('./models/product.js');
 // the cart model needs to be a global, it is used in the cart middleware
 global.Cart = require('./models/cart.js');
@@ -52,6 +53,24 @@ app.use(CartMiddleware);
 // REST routes (backend routes)
 
 // Products CRUD paths
+
+//Kategorier
+app.post('/rest/category', async(req, res)=>{
+  let category = await new Category(req.body);
+  try{
+category.save();
+res.json(category);
+  }catch(err){
+    console.error(err);
+    res.json(err);
+  }
+  });
+
+  app.get('/rest/category', async(req, res)=>{
+    let category = await Category.find(); 
+    res.json(category);
+  });
+
 
 app.post('/rest/pay', async(req, res)=>{
   let userEmail = req.session.user.email;
@@ -86,14 +105,14 @@ app.post('/rest/pay', async(req, res)=>{
 
 app.get('/rest/products', async(req, res)=>{
   //res.send('We are products');
-  let products = await Product.find(); // {name:"The Times"}
+  let products = await Product.find().populate('categories'); // {name:"The Times"}
   res.json(products);
 });
 
 app.get('/rest/products/:id', async(req, res)=>{
   //res.send('We would get one product');
   // get the product from the db
-  let product = await Product.findOne({_id: req.params.id});
+  let product = await Product.findOne({_id: req.params.id}).populate('categories');
   res.json(product);
 });
 

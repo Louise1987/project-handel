@@ -7,7 +7,7 @@ const CartPageComponent = {
         <div class="col-12">
         <label for="first-name">Förnamn:</label>
         <input name="first-name" v-model="firstName"></input>
-        <button v-on:click="pay">Betala</button>
+        <button v-on:click="pay()">Betala</button>
         </div>
         </div>
     `, 
@@ -20,7 +20,9 @@ const CartPageComponent = {
       pay: ()=>{
         console.log('pay');
         http.post('/rest/pay', {}).then(response => {
-          console.log(response);   
+          console.log(response);
+          alert("Tack för er order! du kommer snart få en bekräftelse"); 
+          
         }).catch(error => {
           console.error(error);
           // this.loading = false;
