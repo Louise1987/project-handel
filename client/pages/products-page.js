@@ -5,10 +5,10 @@ const ProductsPageComponent = {
   template: `
     <div class="row">
     <input v-if="!slice" type="search" title="Sök produkt" v-model="searchString">
-
+    <h1 v-if="!slice">Product page</h1>
       <div class="col-12 card-body">
       <div id="categories">
-        <h1 v-if="!slice">Product page</h1>
+        
         <product class="col-4"
           v-for="item in categoryFilteredProducts"
           v-bind:item="item"
