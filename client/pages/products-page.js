@@ -35,7 +35,7 @@ const ProductsPageComponent = {
       });
 
       console.log('products', response.data)
-      this.products = response.data;
+      //this.products = response.data;
     }).catch(e => {
       console.error(e);
     });
