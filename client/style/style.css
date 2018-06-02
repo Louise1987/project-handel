@@ -11,7 +11,7 @@ body{
   max-width: 40px;
 }
 .darker{
-  background:rgba(0,0,0,0.5);
+  background:rgba(36, 54, 116, 0.5);
   padding:10px;
   margin:10px;
 }
@@ -20,14 +20,45 @@ body{
   font-weight: bold;
 }
 
-h1,h2{
-  font-family: sans-serif;
-  padding: 0 20px;
-  font-size: 40px;
+.nav-link{
+  color: #f2f2f2; 
+    background: #192229; 
+    font-size: 40px; 
+    line-height: 74px; 
+    font-weight: 700; 
+    margin: 0 5px 24px; 
+    float: left; 
+    padding: 10px; 
+    margin: 0 5px 24px; 
+    font-family: 'Libre Baskerville', serif; 
+}
+
+
+h1{
+ color: rgb(63, 60, 60); 
+ font-family: 'Open Sans Condensed', sans-serif; 
+ font-size: 40px; 
+ font-weight: 700; 
+ line-height: 64px; 
+ margin: 0 0 0; 
+ padding: 20px 30px; 
+ text-align: center;
+  text-transform: uppercase; 
+}
+
+h2{
+   font-family: Georgia, arial, serif; 
+  font-size: 38px; 
 }
 
 p{
   font-family: sans-serif;
   padding: 0 20px;
   font-size: 20px;
+}
+
+button{
+  border-radius: 8px;
+  background-color: rgb(75, 75, 128);
+  color: white;
 }
